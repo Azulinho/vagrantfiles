@@ -1,0 +1,21 @@
+[
+  "vagrant-cachier",
+  "vagrant-berkshelf",
+  "vagrant-chefzero",
+  "vagrant-omnibus",
+  "vagrant-docker",
+  "vagrant-pristine",
+  "vagrant-lxc",
+  "sahara",
+  "vagrant-vbox-snapshot",
+  "vagrant-cucumber",
+  "vagrant-multiprovider-snap",
+  "vagrant-global-status",
+  "vagrant-persistent-storage",
+  "vagrant-shell-commander",
+  "vagrant-hostmanager",
+  "vagrant-reload",
+  "vagrant-vbguest",
+  "vagrant-ohai",
+  "vocker"
+]

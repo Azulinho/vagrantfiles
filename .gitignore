@@ -1,0 +1,4 @@
+vendor
+screenlog.*
+bin
+.zero-knife.rb

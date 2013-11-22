@@ -1,0 +1,94 @@
+{
+  "sources": {
+    "apache": {
+      "locked_version": "0.0.5"
+    },
+    "vagrant-httpproxy": {
+      "locked_version": "0.1.0",
+      "git": "git://github.com/juliandunn/vagrant-httpproxy.git",
+      "ref": "870928cc68f6b8eca033797784b367c14d69ad5f"
+    },
+    "app-wordpress": {
+      "locked_version": "0.1.1",
+      "git": "git://github.com/Azulinho/app-wordpress.git",
+      "ref": "1f3d1e6de0b4045af57b54a593accbf2c56fb5f8"
+    },
+    "app-umbraco": {
+      "locked_version": "0.1.0",
+      "git": "git://github.com/Azulinho/app-umbraco.git",
+      "ref": "a9964498aa52d7d1e8a304b047b86c9c88f5179b"
+    },
+    "apache2": {
+      "locked_version": "1.8.4"
+    },
+    "apt": {
+      "locked_version": "2.3.0"
+    },
+    "yum": {
+      "locked_version": "2.4.2"
+    },
+    "build-essential": {
+      "locked_version": "1.4.2"
+    },
+    "chef_handler": {
+      "locked_version": "1.1.4"
+    },
+    "runit": {
+      "locked_version": "1.4.0"
+    },
+    "git": {
+      "locked_version": "2.7.0"
+    },
+    "dmg": {
+      "locked_version": "2.0.8"
+    },
+    "windows": {
+      "locked_version": "1.11.0"
+    },
+    "xml": {
+      "locked_version": "1.2.0"
+    },
+    "screen": {
+      "locked_version": "0.8.0"
+    },
+    "users": {
+      "locked_version": "1.6.0"
+    },
+    "sudo": {
+      "locked_version": "2.2.2"
+    },
+    "memcached": {
+      "locked_version": "1.6.2"
+    },
+    "fail2ban": {
+      "locked_version": "2.0.0"
+    },
+    "mysql": {
+      "locked_version": "4.0.4"
+    },
+    "openssl": {
+      "locked_version": "1.1.0"
+    },
+    "php": {
+      "locked_version": "1.2.6"
+    },
+    "postfix": {
+      "locked_version": "3.0.4"
+    },
+    "wordpress": {
+      "locked_version": "1.2.0"
+    },
+    "ms_dotnet4": {
+      "locked_version": "1.0.2"
+    },
+    "ms_dotnet45": {
+      "locked_version": "1.1.2"
+    },
+    "chocolatey": {
+      "locked_version": "0.0.5"
+    },
+    "powershell": {
+      "locked_version": "1.1.2"
+    }
+  }
+}
