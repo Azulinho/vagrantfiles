@@ -23,7 +23,7 @@ plugins = [
   "vocker"
 ]
 
-task :default => [ :install, :up ]
+task :default => [ :install, :up, :provision ]
 
 task :install do
   # clean Vagrantfile
@@ -56,7 +56,7 @@ task :provision do
 end
 
 task :up do
-  system("vagrant up")
+  system("vagrant up --no-provision")
 end
 
 task :destroy do
