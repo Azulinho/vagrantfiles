@@ -33,20 +33,6 @@ cookbook_testers = {
     #},
     #:run_list => "recipe[apache]"
   #},
-  #
-
-
-  :WIN2K8R2 => {
-    :vmbox_name => 'WIN2K8R2',
-    :vmbox_url => 'FILL ME IN',
-    :hostname => "win2k8-cookbook-test",
-    :ipaddress => "172.16.1.12",
-    :run_list => "recipe[app-umbraco]",
-    :on_boot => [],
-    :os_type => "windows"
-    },
-
-
   :precise => {
     :vmbox_name => 'precise64',
     :vmbox_url => 'http://files.vagrantup.com/precise64.box',
@@ -57,7 +43,16 @@ cookbook_testers = {
                      "echo -e 'vagrant\nvagrant' | passwd root "
                    ],
     :os_type => "linux"
-  }
+  },
+  :WIN2K8R2 => {
+    :vmbox_name => 'WIN2K8R2',
+    :vmbox_url => 'FILL ME IN',
+    :hostname => "win2k8-cookbook-test",
+    :ipaddress => "172.16.1.12",
+    :run_list => "recipe[app-umbraco]",
+    :on_boot => [],
+    :os_type => "windows"
+    }
 }
 
 Vagrant.require_plugin "vagrant-chefzero"
@@ -68,6 +63,7 @@ Vagrant.configure("2") do |global_config|
 
   global_config.vm.define :chefzero do |vbox|
     vbox.vm.network :private_network, ip: chef0_ip
+    vbox.vm.hostname = "chefzero"
     vbox.vm.box = 'precise64'
     vbox.vm.box_url = 'http://files.vagrantup.com/precise64.box'
 

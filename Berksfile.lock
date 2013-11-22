@@ -16,7 +16,7 @@
     "app-umbraco": {
       "locked_version": "0.1.0",
       "git": "git://github.com/Azulinho/app-umbraco.git",
-      "ref": "a9964498aa52d7d1e8a304b047b86c9c88f5179b"
+      "ref": "bff034c12f4ecef37cd3690213bf1ec275cb8932"
     },
     "apache2": {
       "locked_version": "1.8.4"
@@ -64,7 +64,7 @@
       "locked_version": "2.0.0"
     },
     "mysql": {
-      "locked_version": "4.0.4"
+      "locked_version": "4.0.6"
     },
     "openssl": {
       "locked_version": "1.1.0"
