@@ -16,7 +16,7 @@
     "app-umbraco": {
       "locked_version": "0.1.0",
       "git": "git://github.com/Azulinho/app-umbraco.git",
-      "ref": "bff034c12f4ecef37cd3690213bf1ec275cb8932"
+      "ref": "b9cee0f6d4245d8133b5e1fe4a05de4d88692710"
     },
     "apache2": {
       "locked_version": "1.8.4"
@@ -83,6 +83,9 @@
     },
     "ms_dotnet45": {
       "locked_version": "1.1.2"
+    },
+    "webpi": {
+      "locked_version": "1.2.6"
     },
     "chocolatey": {
       "locked_version": "0.0.5"

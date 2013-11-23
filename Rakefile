@@ -23,7 +23,14 @@ plugins = [
   "vocker"
 ]
 
-task :default => [ :install, :up, :provision ]
+boxes = {
+  :precise64 => "http://files.vagrantup.com/precise64.box",
+  :WIN2K8R2 => "FILL ME IN"
+}
+
+
+task :default => [
+  :install, :download_boxes, :import_boxes, :clean_boxes, :up, :provision ]
 
 task :install do
   # clean Vagrantfile
@@ -61,4 +68,23 @@ end
 
 task :destroy do
   system("vagrant destroy -f")
+end
+
+task :download_boxes do
+  boxes.each_pair do |name,url|
+    system("wget #{url}")
+  end
+end
+
+task :import_boxes do
+  boxes.each_pair do |name,url|
+    system("vagrant box add #{name} #{url}")
+  end
+end
+
+
+task :clean_boxes do
+  boxes.each_pair do |name,url|
+    system("rm #{name}.box")
+  end
 end

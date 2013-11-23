@@ -31,7 +31,7 @@ cookbook_testers = {
         #:volgroupname => "vg01"
       #}
     #},
-    #:run_list => "recipe[apache]"
+    #:run_list => [ "recipe[vagrant-httproxy]", "recipe[apache]" ]
   #},
   :precise => {
     :vmbox_name => 'precise64',
@@ -42,16 +42,19 @@ cookbook_testers = {
     :on_boot => [ "apt-get update",
                      "echo -e 'vagrant\nvagrant' | passwd root "
                    ],
-    :os_type => "linux"
+    :os_type => "linux",
+    :ram => 512
   },
   :WIN2K8R2 => {
     :vmbox_name => 'WIN2K8R2',
+    #:vmbox_name => 'vgwindows01-23092013-1552',
     :vmbox_url => 'FILL ME IN',
     :hostname => "win2k8-cookbook-test",
     :ipaddress => "172.16.1.12",
     :run_list => "recipe[app-umbraco]",
     :on_boot => [],
-    :os_type => "windows"
+    :os_type => "windows",
+    :ram => 1024
     }
 }
 
@@ -99,7 +102,8 @@ Vagrant.configure("2") do |global_config|
       config.vm.synced_folder ".", "/vagrant", disabled:  true
 
       config.vm.provider "virtualbox" do |v|
-        v.gui = false
+        v.gui = true
+        v.customize ["modifyvm", :id, "--memory", options[:ram] ]
       end
 
       case options[:os_type]
@@ -146,7 +150,6 @@ Vagrant.configure("2") do |global_config|
         chef.validation_key_path = Vagrant::ChefzeroPlugin.pemfile
         chef.client_key_path = Vagrant::ChefzeroPlugin.pemfile
         chef.log_level = :info
-        #run_list = ['recipe[vagrant-httpproxy]']
         run_list = []
         run_list << ENV['CHEF_RUN_LIST'].split(",") if ENV.has_key?('CHEF_RUN_LIST')
         chef.run_list = [options[:run_list].split(","), run_list].flatten
