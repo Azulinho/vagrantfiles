@@ -48,7 +48,7 @@ cookbook_testers = {
   },
   :WIN2K8R2 => {
     :vmbox_name => 'WIN2K8R2',
-    :vmbox_url => 'FILL ME IN',
+    :vmbox_url => 'https://dl.dropboxusercontent.com/u/183941/WIN2K8R2.box',
     :hostname => "win2k8-cookbook-test",
     :ipaddress => "172.16.1.12",
     :run_list => "recipe[app-umbraco]",
@@ -75,11 +75,9 @@ Vagrant.configure("2") do |global_config|
     config.hostmanager.enabled = true
     config.hostmanager.ignore_private_ip = false
     config.hostmanager.include_offline = true
-    # https://github.com/dotless-de/vagrant-vbguest/pull/90
-    # needs plugin version 0.10.0
     config.hostmanager.manage_host = true
-    config.vbguest.auto_update = false
-    config.vbguest.auto_reboot = false
+    config.vbguest.auto_update = true
+    config.vbguest.auto_reboot = true
     config.vm.boot_timeout = 300
 
     config.vm.provision :chefzero do |vm|
@@ -105,9 +103,8 @@ Vagrant.configure("2") do |global_config|
       config.hostmanager.ignore_private_ip = false
       config.hostmanager.include_offline = true
       config.hostmanager.manage_host = true
-      # https://github.com/dotless-de/vagrant-vbguest/pull/90
-      # needs plugin version 0.10.0
-      config.vbguest.auto_update = false
+      config.vbguest.auto_update = true
+      config.vbguest.auto_reboot = true
       config.vm.boot_timeout = 300
       config.vm.box = options[:vmbox_name]
       config.vm.box_url = options[:vmbox_url]

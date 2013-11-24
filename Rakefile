@@ -25,7 +25,7 @@ plugins = [
 
 boxes = {
   :precise64 => "http://files.vagrantup.com/precise64.box",
-  :WIN2K8R2 => "FILL ME IN"
+  :WIN2K8R2 => "https://dl.dropboxusercontent.com/u/183941/WIN2K8R2.box"
 }
 
 
@@ -53,6 +53,9 @@ task :install do
   plugins.each do |x|
     system("vagrant plugin install #{x}")
   end
+
+  # we need the latest vagrant-vbguest
+  system("vagrant plugin install --plugin-source http://rubygems.org/ --plugin-prerelease vagrant-vbguest")
 
   # install good vagrantfile
   system("cp Vagrantfile.latest Vagrantfile")
