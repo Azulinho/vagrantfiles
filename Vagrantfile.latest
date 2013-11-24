@@ -43,18 +43,19 @@ cookbook_testers = {
                      "echo -e 'vagrant\nvagrant' | passwd root "
                    ],
     :os_type => "linux",
-    :ram => 512
+    :ram => 1024,
+    :vrde_port => 5001
   },
   :WIN2K8R2 => {
     :vmbox_name => 'WIN2K8R2',
-    #:vmbox_name => 'vgwindows01-23092013-1552',
     :vmbox_url => 'FILL ME IN',
     :hostname => "win2k8-cookbook-test",
     :ipaddress => "172.16.1.12",
     :run_list => "recipe[app-umbraco]",
     :on_boot => [],
     :os_type => "windows",
-    :ram => 1024
+    :ram => 2048,
+    :vrde_port => 5002
     }
 }
 
@@ -104,6 +105,8 @@ Vagrant.configure("2") do |global_config|
       config.vm.provider "virtualbox" do |v|
         v.gui = true
         v.customize ["modifyvm", :id, "--memory", options[:ram] ]
+        v.customize ["modifyvm", :id, "--vrde", "on" ]
+        v.customize ["modifyvm", :id, "--vrdeport", options[:vrde_port] ]
       end
 
       case options[:os_type]

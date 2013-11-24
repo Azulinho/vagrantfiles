@@ -1,8 +1,5 @@
 {
   "sources": {
-    "apache": {
-      "locked_version": "0.0.5"
-    },
     "vagrant-httpproxy": {
       "locked_version": "0.1.0",
       "git": "git://github.com/juliandunn/vagrant-httpproxy.git",
@@ -11,15 +8,17 @@
     "app-wordpress": {
       "locked_version": "0.1.1",
       "git": "git://github.com/Azulinho/app-wordpress.git",
-      "ref": "1f3d1e6de0b4045af57b54a593accbf2c56fb5f8"
+      "ref": "f2aafcd2630f98d8f661d7d2f2345e358d283caa"
     },
     "app-umbraco": {
       "locked_version": "0.1.0",
       "git": "git://github.com/Azulinho/app-umbraco.git",
-      "ref": "b9cee0f6d4245d8133b5e1fe4a05de4d88692710"
+      "ref": "332e864a8bbc3b22d88eeaed9b3ca3e18deb4822"
     },
-    "apache2": {
-      "locked_version": "1.8.4"
+    "wrappers": {
+      "locked_version": "0.1.0",
+      "git": "git://github.com/Azulinho/wrappers.git",
+      "ref": "23e263029adbb3bdf18659adcd856d3b0375f165"
     },
     "apt": {
       "locked_version": "2.3.0"
@@ -78,6 +77,9 @@
     "wordpress": {
       "locked_version": "1.2.0"
     },
+    "apache2": {
+      "locked_version": "1.8.4"
+    },
     "ms_dotnet4": {
       "locked_version": "1.0.2"
     },
@@ -87,11 +89,11 @@
     "webpi": {
       "locked_version": "1.2.6"
     },
-    "chocolatey": {
-      "locked_version": "0.0.5"
+    "7-zip": {
+      "locked_version": "1.0.2"
     },
-    "powershell": {
-      "locked_version": "1.1.2"
+    "iis": {
+      "locked_version": "1.5.4"
     }
   }
 }
