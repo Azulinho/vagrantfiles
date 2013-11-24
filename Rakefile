@@ -29,7 +29,19 @@ boxes = {
 }
 
 
-task :default => [
+task :default do
+  puts "available tasks:"
+  puts "setup           -> downloads boxes, installs plugins, up and provision"
+  puts "up              -> vagrant up but not provision"
+  puts "provision       -> berks update and vagrant provision"
+  puts "install         -> install vagrant plugins"
+  puts "download_boxes  -> download the vagrant boxes"
+  puts "clean_boxes     -> remove the downloaded vagrant boxes"
+  puts "uninstall       -> destroy the VMs and uninstall the vagrant plugins"
+  puts "destroy         -> destroy the VMs"
+end
+
+task :setup => [
   :install, :download_boxes, :import_boxes, :clean_boxes, :up, :provision ]
 
 task :install do
