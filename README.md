@@ -6,7 +6,8 @@ To deploy:
      rake up
      rake provision
 4. open a browser and point to:
-   http://172.16.1.11
+   http://127.0.0.1:8311
+   http://127.0.0.1:8312
 
    to clean up do:
    rake destroy
