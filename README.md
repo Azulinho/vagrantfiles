@@ -2,6 +2,7 @@ To deploy:
 
 1. Install vagrant from vagrantup.com
 2. execute:
+     * open VirtualBox Gui
 
      * rake setup
 
