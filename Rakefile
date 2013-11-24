@@ -87,7 +87,7 @@ end
 
 task :download_boxes do
   boxes.each_pair do |name,url|
-    system("wget #{url}")
+    system("wget -c #{url}")
   end
 end
 
