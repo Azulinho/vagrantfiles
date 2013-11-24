@@ -31,7 +31,7 @@ boxes = {
 
 task :default do
   puts "available tasks:"
-  puts "setup           -> downloads boxes, installs plugins, up and provision"
+  puts "setup           -> downloads boxes, installs plugins"
   puts "up              -> vagrant up but not provision"
   puts "provision       -> berks update and vagrant provision"
   puts "install         -> install vagrant plugins"
@@ -42,7 +42,7 @@ task :default do
 end
 
 task :setup => [
-  :install, :download_boxes, :import_boxes, :clean_boxes, :up, :provision ]
+  :install, :download_boxes, :import_boxes ]
 
 task :install do
   # clean Vagrantfile
