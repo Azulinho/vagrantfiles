@@ -21,7 +21,7 @@ windows_batch 'set folder permissions' do
     icacls app_code /grant "IIS_IUSRS":(OI)(CI)RX
     icacls app_browsers /grant "IIS_IUSRS":(OI)(CI)RX
     icacls app_data /grant "IIS_IUSRS":(OI)(CI)M
-    icacls bin /grant "IIS_IUSRS":(OI)(CI)R
+    icacls bin /grant "IIS_IUSRS":(OI)(CI)M
     icacls config /grant "IIS_IUSRS":(OI)(CI)M
     icacls css /grant "IIS_IUSRS":(OI)(CI)M
     icacls data /grant "IIS_IUSRS":(OI)(CI)M
@@ -30,7 +30,7 @@ windows_batch 'set folder permissions' do
     icacls python /grant "IIS_IUSRS":(OI)(CI)M
     icacls scripts /grant "IIS_IUSRS":(OI)(CI)M
     icacls umbraco /grant "IIS_IUSRS":(OI)(CI)M
-    icacls usercontrols /grant "IIS_IUSRS":(OI)(CI)R
+    icacls usercontrols /grant "IIS_IUSRS":(OI)(CI)M
     icacls xslt /grant "IIS_IUSRS":(OI)(CI)M
     icacls views /grant "IIS_IUSRS":(OI)(CI)M
     icacls web.config /grant "IIS_IUSRS":(OI)(CI)M

@@ -13,12 +13,12 @@
     "app-umbraco": {
       "locked_version": "0.1.0",
       "git": "git://github.com/Azulinho/app-umbraco.git",
-      "ref": "332e864a8bbc3b22d88eeaed9b3ca3e18deb4822"
+      "ref": "486ff8c10b5deef4e191ced78f65bd8a908b8c5d"
     },
     "wrappers": {
       "locked_version": "0.1.0",
       "git": "git://github.com/Azulinho/wrappers.git",
-      "ref": "23e263029adbb3bdf18659adcd856d3b0375f165"
+      "ref": "4d1d42c8aceaf04c0a7d8534cba1514419bd6c3e"
     },
     "apt": {
       "locked_version": "2.3.0"
@@ -91,6 +91,9 @@
     },
     "7-zip": {
       "locked_version": "1.0.2"
+    },
+    "powershell": {
+      "locked_version": "1.1.2"
     },
     "iis": {
       "locked_version": "1.5.4"
