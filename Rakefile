@@ -78,6 +78,7 @@ task :provision do
 end
 
 task :up do
+  system("vagrant up chefzero")
   system("vagrant up --no-provision")
 end
 
