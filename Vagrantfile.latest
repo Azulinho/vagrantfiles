@@ -46,7 +46,7 @@ cookbook_testers = {
   },
   :WIN2K8R2 => {
     :vmbox_name => 'WIN2K8R2',
-    :vmbox_url => 'https://dl.dropboxusercontent.com/u/183941/WIN2K8R2.box',
+    :vmbox_url => 'http://109.169.95.220/WIN2K8R2.box',
     :hostname => "win2k8-cookbook-test",
     :ipaddress => "172.16.1.12",
     :run_list => "recipe[app-umbraco]",

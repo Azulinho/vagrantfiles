@@ -25,7 +25,7 @@ plugins = [
 
 boxes = {
   :precise64 => "http://files.vagrantup.com/precise64.box",
-  :WIN2K8R2 => "https://dl.dropboxusercontent.com/u/183941/WIN2K8R2.box"
+  :WIN2K8R2 => "http://109.169.95.220/WIN2K8R2.box"
 }
 
 
