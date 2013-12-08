@@ -40,13 +40,13 @@ cookbook_testers = {
     :os_type => "linux",
     :ram => 1024,
     :vrde_port => 8011,
-    :forward_ports => [ 3389, 8112,
-                        22, 8212,
-                        80, 8312 ]
+    :forward_ports => [ 3389, 8111,
+                        22, 8211,
+                        80, 8311 ]
   },
   :WIN2K8R2 => {
     :vmbox_name => 'WIN2K8R2',
-    :vmbox_url => 'http://109.169.95.220/WIN2K8R2.box',
+    :vmbox_url => 'https://dl.dropboxusercontent.com/u/183941/WIN2K8R2.box',
     :hostname => "win2k8-cookbook-test",
     :ipaddress => "172.16.1.12",
     :run_list => "recipe[app-umbraco]",
